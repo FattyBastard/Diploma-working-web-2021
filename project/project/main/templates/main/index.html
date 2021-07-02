@@ -8,9 +8,12 @@
     <h1>Главная страница о Ирине Тур<h1>
     {% if tasks %}
         {% for el in tasks %}
-            <div class="alert alert-warning mt-2">
+            <div class="alert alert-info mt-2">
                 <h1>{{ el.title }}</h1>
                 <h3>{{ el.task }}</h3>
+                <a class="btn btn-success" href="{% url 'edit' %}">Изменить</a>
+                <a class="btn btn-danger">Удалить</a>
+
             </div>
         {% endfor %}
     {% else %}
